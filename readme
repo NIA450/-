@@ -1,0 +1,13 @@
+To turn the DataFrame data into a one-hot encoding without using get_dummies, you can use the following steps:
+
+1.Create a list of unique values in the whoAmI column.
+2.Create a new column for each unique value.
+3.For each row in the DataFrame, set the value of the new column to 1 if the value in the whoAmI column matches the unique value, and 0 otherwise.
+
+Here is original code:
+import random
+lst = ['robot'] * 10
+lst += ['human'] * 10
+random.shuffle(lst)
+data = pd.DataFrame({'whoAmI':lst})
+data.head()
